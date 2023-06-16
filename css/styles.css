@@ -34,8 +34,8 @@ html {
 }
 body {
   height: 100%;
-  font-family: 'Quicksand', sans-serif;
- color: rgba(0, 0, 0, 0.6);
+  font-family: 'montserrat', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
   font-size: 14px;
   overflow: hidden;
@@ -282,7 +282,7 @@ Page Styles
 }
 
 .left-content {
-    width: 300px;
+    width: 320px;
     overflow-y: auto;
     height: 100%;
     background: #fff;
@@ -309,7 +309,7 @@ Page Styles
     background: #000;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -436,16 +436,16 @@ Page Styles
     text-transform: uppercase;
     margin: 15px 0px;
     color: #222222;
-    font-family: "Roboto", sans-serif;
+    font-family: "montserrat", sans-serif;
     font-weight: 600;
 }
 
 .place_job {
-  font-size: 25px;
+  font-size: 20px;
   text-transform: uppercase;
   margin: 0px 0px;
   color: #222222;
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-weight: 600;
   margin-top: 20px;
 }
@@ -470,12 +470,12 @@ Page Styles
 }
 
 .text {
-   
     font-size: 17px;
+
 }
 
 .text_description {
-  color: #000;
+  color: #222222;
   font-size: 17px;
   line-height: 25px;
 }
@@ -518,22 +518,22 @@ Page Styles
 }
 
 .pg-title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 0px;
     line-height: 1.8;
-    color: #7B68EE;
+    color: #222222;
 }
 
 .pg-sub-title {
     margin-bottom: 10px;
     display: block;
-    font-size: 10px;
+    font-size: 14px;
     text-transform: uppercase;
     color: #999999;
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 2.1px;
 }
 
 .gain-center{
@@ -542,4 +542,45 @@ Page Styles
 }
 .gain-center:hover {
   transform: scale(1.1); /* Увеличиваем масштаб */
+}
+
+
+/*пробую добавлять стили к ссылкам - получилась херня, попробуй навести на мою почту в меню, она внизу*/
+.link {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link:hover {
+  color: #284aaa;
+}
+.link:after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #284aaa;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.link:hover:after {
+  width: 100%;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
 }
