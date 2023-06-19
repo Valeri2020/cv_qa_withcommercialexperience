@@ -210,7 +210,7 @@ Padding & Margins CSS
 }
 
 .m-5{
-  margin:: 5px;
+  margin: 5px;
 }
 .m-10{
   margin: 10px;
@@ -249,19 +249,23 @@ Display Styles
 .d-flex-align-center{
   display: flex;
   align-items: center;
-  flex-direction: row;
+  /* flex-direction: row; */
+  /* padding-bottom: 100px; */
+  /* display: none; */
 }
+
 .d-flex-align-center-column{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.flex-1{
+/* .flex-1{
   flex: 1;
+  flex: 0 1 420px;
 }
 .flex-2{
   flex: 2;
-}
+} */
 
 
 
@@ -272,6 +276,8 @@ Page Styles
 .wraper {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -279,6 +285,7 @@ Page Styles
     height: 100%;
     display: flex;
     flex-direction: row;
+    max-width: 1420px;
 }
 
 .left-content {
@@ -321,7 +328,7 @@ Page Styles
     flex: 1;
     /* display: flex; */
     justify-content: flex-end;
-    margin: 50px 0px;
+    margin: 10px 10px;
 }
 
 .nav ul li, .nav ul li a {
@@ -374,6 +381,7 @@ Page Styles
 .left-footer {
     color: rgba(0, 0, 0, 0.6);
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -382,12 +390,18 @@ Page Styles
     display: flex;
     justify-content: flex-end;
 }
-
+.social-icons {
+  display: flex;
+}
 .social-icons ul li {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
 }
+
+
+
+
 
 .foot-contact ul {
     display: flex;
@@ -406,7 +420,7 @@ Page Styles
 
 .social-icons ul li a {
     padding: 5px 8px;
-    font-size: 16px;
+    font-size: 26px;
 }
 
 
@@ -415,7 +429,8 @@ Page Styles
   transform: scale(1.2) translateY(-5px);
 }
 .user-profile {
-    padding-left: 1px;
+    padding-left: 100px;
+    flex: 1 1 auto;
 }
 
 .user-profile_exp {
@@ -447,8 +462,46 @@ Page Styles
   color: #222222;
   font-family: "montserrat", sans-serif;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
+.place_job a {
+  position: relative;
+}
+
+.place_job a:hover {
+  color: #000;
+}
+.place_job a:after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.place_job a:hover:after {
+  width: 100%;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 
 .role {
     font-size: 18px;
@@ -470,14 +523,21 @@ Page Styles
 }
 
 .text {
-    font-size: 17px;
+    font-size: 16px;
+    max-width: 470px;
 
 }
 
 .text_description {
   color: #222222;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 25px;
+}
+.text_description a {
+  text-decoration: underline;
+}
+.text_description a:hover {
+  color: rgb(48, 66, 231);
 }
 
 .pr-list {
@@ -495,13 +555,49 @@ Page Styles
 .social-icons-head ul {
     display: flex;
 }
+.pr-list ul li a {
+  position: relative;
+}
 
+.pr-list ul li a:hover {
+  color: #000;
+}
+.pr-list ul li a:after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pr-list ul li a:hover:after {
+  width: 100%;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
 .social-icons-head ul li a {
     padding: 5px 10px;
     font-size: 22px;
     transition: all .3s;
         display: flex;
 }
+
 
 .social-icons-head {}
 
@@ -524,6 +620,7 @@ Page Styles
     letter-spacing: 0px;
     line-height: 1.8;
     color: #222222;
+    /* display: none; */
 }
 
 .pg-sub-title {
@@ -544,8 +641,6 @@ Page Styles
   transform: scale(1.1); /* Увеличиваем масштаб */
 }
 
-
-/*пробую добавлять стили к ссылкам - получилась херня, попробуй навести на мою почту в меню, она внизу*/
 .link {
   flex: 1;
   display: flex;
@@ -583,4 +678,135 @@ Page Styles
   -ms-transform: scaleX(1);
   -o-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.user-img {
+flex: 0 0 335px;
+position: relative;
+margin-right: 25px;
+}
+.user-img img{
+  border-radius: 10px;
+max-width: 100%;
+}
+
+
+.nav__skills {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 0px 0px;
+  color: #222222;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  line-height: 1.8;
+}
+
+.nav__text_description {
+  color: #222222;
+  font-size: 14px;
+  line-height: 25px;
+}
+.nav__text_description a {
+  text-decoration: underline;
+}
+.nav__text_description a:hover {
+  color: #284aaa;
+}
+
+.hide {
+  display: none;
+}
+
+.pg-title-hide {
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  line-height: 1.8;
+  color: #222222;
+  display: none;
+}
+
+@media (max-width: 1020px) {
+  .left-content {
+    width: 250px;
+}
+.p-30 {
+padding: 20px;
+}
+  .user-img {
+    flex: 0 0 250px;
+    margin-right: 10px;
+  }
+  .name {
+    font-size: 30px;
+  }
+  .sec-title {
+    margin-bottom: 20px;
+  }
+  .pg-title {
+    font-size: 22px;
+  }
+
+}
+
+
+@media (max-width: 767.98px) {
+  .left-content {
+    display: none;
+  }
+  .hide {
+    display: block;
+  }
+  .pg-title-hide {
+    display: block;
+  }
+  .d-flex-align-center {
+    flex-direction: column;
+  }
+  .sec-title {
+    text-align: center;
+  }
+  .user-img {
+    margin-bottom: 15px;
+  }
+  .user-profile {
+    width: 100%;
+  }
+  .text {
+    max-width: 100%;
+  }
+  .d-flex-align-center {
+    align-items: normal;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .p-30 {
+    padding: 5px;
+  }
+  .user-img {
+    margin-right: 0px;
+  }
+  .role {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 18px;
+  }
+  .pg-title {
+    font-size: 18px;
+  }
+  .place_job {
+    font-size: 18px;
+  }
+  .pg-title-hide {
+    font-size: 18px;
+    
+  }
 }
