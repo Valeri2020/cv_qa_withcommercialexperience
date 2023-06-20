@@ -429,7 +429,7 @@ Page Styles
   transform: scale(1.2) translateY(-5px);
 }
 .user-profile {
-    padding-left: 100px;
+    padding-left: 1px;
     flex: 1 1 auto;
 }
 
@@ -486,11 +486,11 @@ Page Styles
   -ms-transform: scaleX(0);
   -o-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.3s cubic-bezier(0.105, 0.805, 0.10, 1.205);
+  -moz-transition: all 0.3s cubic-bezier(0.105, 0.805, 0.10, 1.205);
+  -ms-transition: all 0.3s cubic-bezier(0.105, 0.805, 0.10, 1.205);
+  -o-transition: all 0.3s cubic-bezier(0.105, 0.805, 0.10, 1.205);
+  transition: all 0.3s cubic-bezier(0.105, 0.805, 0.10, 1.205);
 }
 
 .place_job a:hover:after {
@@ -807,6 +807,52 @@ padding: 20px;
   }
   .pg-title-hide {
     font-size: 18px;
-    
   }
+}
+.pr-footer {
+  margin: 10px 0px;
+}
+
+.pr-footer ul li {
+  margin-bottom: 10px;
+}
+
+.pr-footer ul li i {
+  width: 18px;
+}
+
+.pr-footer ul li a {
+position: relative;
+}
+.pr-footer ul li a:hover {
+color: #000;
+}
+.pr-footer ul li a:after {
+content: "";
+width: 0;
+height: 1px;
+background: #000;
+position: absolute;
+bottom: -5px;
+left: 0;
+right: 0;
+-webkit-transform: scaleX(0);
+-moz-transform: scaleX(0);
+-ms-transform: scaleX(0);
+-o-transform: scaleX(0);
+transform: scaleX(0);
+-webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+-moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+-ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+-o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pr-footer ul li a:hover:after {
+width: 100%;
+-webkit-transform: scaleX(1);
+-moz-transform: scaleX(1);
+-ms-transform: scaleX(1);
+-o-transform: scaleX(1);
+transform: scaleX(1);
 }
