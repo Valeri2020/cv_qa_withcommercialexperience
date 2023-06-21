@@ -811,6 +811,7 @@ padding: 20px;
 }
 .pr-footer {
   margin: 10px 0px;
+  text-align: center; 
 }
 
 .pr-footer ul li {
